@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.component-pod-div {
+  border: 2px dashed green;
+
+  margin: 10px;
+}
+
+.component-node-div {
+  border: 2px solid pink;
+
+  width: 50%;
+}
+
+.component-cluster-div {
+  border: 2px solid purple;
+
+  padding: 10px;
+}
