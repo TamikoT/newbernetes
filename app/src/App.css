@@ -1,42 +1,64 @@
+/* for easier time seeing things - TODO: delete for build  */
+.test-border {
+  border: 2px dotted red;
+}
+.test-back {
+  background-color: yellow;
+}
+
+
+/*  APP LEVEL  */
 .App {
   text-align: center;
 }
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+/* from material design lite */
+.demo-card-wide.mdl-card {
+  width: 100%;
+  text-align: left;
+}
 
+
+/*  COMPONENT LEVEL  */
+.component-master {
+  margin: 10px;
+}
 .component-pod-div {
   border: 2px dashed green;
 
   margin: 10px;
 }
-
 .component-node-div {
   border: 2px solid pink;
 
   width: 50%;
 }
-
 .component-cluster-div {
   border: 2px solid purple;
 
   padding: 10px;
+}
+
+
+/*  COLUMN DESIGN  */
+.left-window {
+  border: 1px dashed gray;
+  float: left;
+  width: 59%;
+  clear: right;
+}
+.right-window {
+  width: 40%;
+  float: right;
+  min-height: 250px; 
+}
+.text-column {
+  padding: 20px;
 }
