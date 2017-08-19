@@ -29,16 +29,40 @@
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Newbernetes</span>
+          <div class="mdl-layout-spacer"></div>
+          <!-- hidden in small screens -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href="/">Home</a>
+            <a class="mdl-navigation__link" href="">Resources</a>
+            <a class="mdl-navigation__link" href="https://kubernetes.io/docs/home/">Docs</a>
+            <a class="mdl-navigation__link" href="https://github.com/TamikoT/newbernetes">GitHub</a>
+          </nav>
+        </div>
+      </header>
+      <!-- dropdown menu -->
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Title</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="/">Home</a>
+          <a class="mdl-navigation__link" href="">Resources</a>
+          <a class="mdl-navigation__link" href="https://kubernetes.io/docs/home/">Docs</a> 
+          <a class="mdl-navigation__link" href="https://github.com/TamikoT/newbernetes">GitHub</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <div id="root">
+            <!-- where App.js is being rendered -->
+          </div>
+        </div>
+      </main>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    </div>   
   </body>
 </html>

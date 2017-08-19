@@ -1,33 +1,41 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import ComponentNode from './component_node'
+import ComponentCluster from './component_cluster';
+
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      pods: [1, 2, 3],
-      selectedPod: null
-    };
-  }
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Newbernetes</h2>
+       
+        <div className="left-window">
+          <ComponentCluster></ComponentCluster>
         </div>
-        <p className="App-intro">
-          Kubernetes Visualized
-        </p>
-        <div className="component-cluster-div">
-          <ComponentNode
-            onPodSelect={selectedPod => this.setState({selectedPod})}
-            pods={this.state.pods}
-          />
-         </div> 
+
+        <div className="right-window">
+          <section className="text-column">
+            <div className="demo-card-wide mdl-card mdl-shadow--2dp">
+              <img src={logo} className="App-logo" alt="logo" />
+              <div className="mdl-card__title">
+                <h3 className="mdl-card__title-text">Welcome</h3>
+              </div>
+              <div className="mdl-card__supporting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris sagittis pellentesque lacus eleifend lacinia...
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris sagittis pellentesque lacus eleifend lacinia...
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris sagittis pellentesque lacus eleifend lacinia...
+              </div>
+              <div className="mdl-card__actions mdl-card--border">
+                <a className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                  Get Started
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     );
   }
