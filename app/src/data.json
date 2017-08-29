@@ -1,0 +1,680 @@
+// MINIKUBE DATA
+// obtained with: kubectl get all -o json 
+
+// loop over `items` array
+// items[n].kind = Pod || Service || Deployment || ReplicaSet
+
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "annotations": {
+                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1\",\"reference\":{\"kind\":\"ReplicaSet\",\"namespace\":\"default\",\"name\":\"hello-minikube-180744149\",\"uid\":\"e6d95bea-8c4a-11e7-8c38-f2ee01e28c74\",\"apiVersion\":\"extensions\",\"resourceVersion\":\"33548\"}}\n"
+                },
+                "creationTimestamp": "2017-08-28T23:44:58Z",
+                "generateName": "hello-minikube-180744149-",
+                "labels": {
+                    "pod-template-hash": "180744149",
+                    "run": "hello-minikube"
+                },
+                "name": "hello-minikube-180744149-kwznv",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "extensions/v1beta1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "ReplicaSet",
+                        "name": "hello-minikube-180744149",
+                        "uid": "e6d95bea-8c4a-11e7-8c38-f2ee01e28c74"
+                    }
+                ],
+                "resourceVersion": "33594",
+                "selfLink": "/api/v1/namespaces/default/pods/hello-minikube-180744149-kwznv",
+                "uid": "e6dad3a7-8c4a-11e7-8c38-f2ee01e28c74"
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "image": "gcr.io/google_containers/echoserver:1.4",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "hello-minikube",
+                        "ports": [
+                            {
+                                "containerPort": 8080,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-bnmtt",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "nodeName": "minikube",
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "volumes": [
+                    {
+                        "name": "default-token-bnmtt",
+                        "secret": {
+                            "defaultMode": 420,
+                            "secretName": "default-token-bnmtt"
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2017-08-28T23:45:01Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2017-08-28T23:45:12Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2017-08-28T23:45:01Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "docker://f12d99e34b32ad34ec1f9900d8ab1b33698c6d6897890a46a7b777a27092540d",
+                        "image": "gcr.io/google_containers/echoserver:1.4",
+                        "imageID": "docker-pullable://gcr.io/google_containers/echoserver@sha256:5d99aa1120524c801bc8c1a7077e8f5ec122ba16b6dda1a5d3826057f67b9bcb",
+                        "lastState": {},
+                        "name": "hello-minikube",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "running": {
+                                "startedAt": "2017-08-28T23:45:12Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "192.168.64.2",
+                "phase": "Running",
+                "podIP": "172.17.0.5",
+                "qosClass": "BestEffort",
+                "startTime": "2017-08-28T23:45:01Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "annotations": {
+                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1\",\"reference\":{\"kind\":\"ReplicaSet\",\"namespace\":\"default\",\"name\":\"hello-node-1038538626\",\"uid\":\"f9e4a667-83a1-11e7-96f6-f2ee01e28c74\",\"apiVersion\":\"extensions\",\"resourceVersion\":\"748\"}}\n"
+                },
+                "creationTimestamp": "2017-08-17T23:15:36Z",
+                "generateName": "hello-node-1038538626-",
+                "labels": {
+                    "pod-template-hash": "1038538626",
+                    "run": "hello-node"
+                },
+                "name": "hello-node-1038538626-t345w",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "extensions/v1beta1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "ReplicaSet",
+                        "name": "hello-node-1038538626",
+                        "uid": "f9e4a667-83a1-11e7-96f6-f2ee01e28c74"
+                    }
+                ],
+                "resourceVersion": "33543",
+                "selfLink": "/api/v1/namespaces/default/pods/hello-node-1038538626-t345w",
+                "uid": "f9e8b206-83a1-11e7-96f6-f2ee01e28c74"
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "image": "hello-node:v1",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "hello-node",
+                        "ports": [
+                            {
+                                "containerPort": 8080,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-bnmtt",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "nodeName": "minikube",
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "volumes": [
+                    {
+                        "name": "default-token-bnmtt",
+                        "secret": {
+                            "defaultMode": 420,
+                            "secretName": "default-token-bnmtt"
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2017-08-17T23:15:36Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2017-08-28T23:44:58Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2017-08-17T23:15:36Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "docker://3b18f803fe949a71bac6fe143613596699134f95cdd91e11441fc797f4147b0b",
+                        "image": "hello-node:v1",
+                        "imageID": "docker://sha256:ddbe5931ad33f504610256dfa46a2b022779603f716a453488a742bcc30cc591",
+                        "lastState": {
+                            "terminated": {
+                                "containerID": "docker://1435a8d8eef08e4e4351d3afbf4d3356406e01e0bb191a78f7090ef3924a8a43",
+                                "exitCode": 0,
+                                "finishedAt": "2017-08-28T17:50:19Z",
+                                "reason": "Completed",
+                                "startedAt": "2017-08-28T17:46:18Z"
+                            }
+                        },
+                        "name": "hello-node",
+                        "ready": true,
+                        "restartCount": 4,
+                        "state": {
+                            "running": {
+                                "startedAt": "2017-08-28T23:44:56Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "192.168.64.2",
+                "phase": "Running",
+                "podIP": "172.17.0.3",
+                "qosClass": "BestEffort",
+                "startTime": "2017-08-17T23:15:36Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Service",
+            "metadata": {
+                "creationTimestamp": "2017-08-28T23:45:06Z",
+                "labels": {
+                    "run": "hello-minikube"
+                },
+                "name": "hello-minikube",
+                "namespace": "default",
+                "resourceVersion": "33582",
+                "selfLink": "/api/v1/namespaces/default/services/hello-minikube",
+                "uid": "eb79b074-8c4a-11e7-8c38-f2ee01e28c74"
+            },
+            "spec": {
+                "clusterIP": "10.0.0.100",
+                "externalTrafficPolicy": "Cluster",
+                "ports": [
+                    {
+                        "nodePort": 32292,
+                        "port": 8080,
+                        "protocol": "TCP",
+                        "targetPort": 8080
+                    }
+                ],
+                "selector": {
+                    "run": "hello-minikube"
+                },
+                "sessionAffinity": "None",
+                "type": "NodePort"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Service",
+            "metadata": {
+                "creationTimestamp": "2017-08-17T23:16:03Z",
+                "labels": {
+                    "run": "hello-node"
+                },
+                "name": "hello-node",
+                "namespace": "default",
+                "resourceVersion": "800",
+                "selfLink": "/api/v1/namespaces/default/services/hello-node",
+                "uid": "0a454c46-83a2-11e7-96f6-f2ee01e28c74"
+            },
+            "spec": {
+                "clusterIP": "10.0.0.6",
+                "externalTrafficPolicy": "Cluster",
+                "ports": [
+                    {
+                        "nodePort": 31745,
+                        "port": 8080,
+                        "protocol": "TCP",
+                        "targetPort": 8080
+                    }
+                ],
+                "selector": {
+                    "run": "hello-node"
+                },
+                "sessionAffinity": "None",
+                "type": "LoadBalancer"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Service",
+            "metadata": {
+                "creationTimestamp": "2017-08-17T23:06:42Z",
+                "labels": {
+                    "component": "apiserver",
+                    "provider": "kubernetes"
+                },
+                "name": "kubernetes",
+                "namespace": "default",
+                "resourceVersion": "8",
+                "selfLink": "/api/v1/namespaces/default/services/kubernetes",
+                "uid": "bb7e03ae-83a0-11e7-96f6-f2ee01e28c74"
+            },
+            "spec": {
+                "clusterIP": "10.0.0.1",
+                "ports": [
+                    {
+                        "name": "https",
+                        "port": 443,
+                        "protocol": "TCP",
+                        "targetPort": 8443
+                    }
+                ],
+                "sessionAffinity": "ClientIP",
+                "type": "ClusterIP"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "Deployment",
+            "metadata": {
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "1"
+                },
+                "creationTimestamp": "2017-08-28T23:44:58Z",
+                "generation": 1,
+                "labels": {
+                    "run": "hello-minikube"
+                },
+                "name": "hello-minikube",
+                "namespace": "default",
+                "resourceVersion": "33597",
+                "selfLink": "/apis/extensions/v1beta1/namespaces/default/deployments/hello-minikube",
+                "uid": "e6d662ba-8c4a-11e7-8c38-f2ee01e28c74"
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "matchLabels": {
+                        "run": "hello-minikube"
+                    }
+                },
+                "strategy": {
+                    "rollingUpdate": {
+                        "maxSurge": 1,
+                        "maxUnavailable": 1
+                    },
+                    "type": "RollingUpdate"
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "run": "hello-minikube"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "image": "gcr.io/google_containers/echoserver:1.4",
+                                "imagePullPolicy": "IfNotPresent",
+                                "name": "hello-minikube",
+                                "ports": [
+                                    {
+                                        "containerPort": 8080,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File"
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "restartPolicy": "Always",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "terminationGracePeriodSeconds": 30
+                    }
+                }
+            },
+            "status": {
+                "availableReplicas": 1,
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2017-08-28T23:44:58Z",
+                        "lastUpdateTime": "2017-08-28T23:44:58Z",
+                        "message": "Deployment has minimum availability.",
+                        "reason": "MinimumReplicasAvailable",
+                        "status": "True",
+                        "type": "Available"
+                    }
+                ],
+                "observedGeneration": 1,
+                "readyReplicas": 1,
+                "replicas": 1,
+                "updatedReplicas": 1
+            }
+        },
+        {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "Deployment",
+            "metadata": {
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "1"
+                },
+                "creationTimestamp": "2017-08-17T23:15:36Z",
+                "generation": 1,
+                "labels": {
+                    "run": "hello-node"
+                },
+                "name": "hello-node",
+                "namespace": "default",
+                "resourceVersion": "33546",
+                "selfLink": "/apis/extensions/v1beta1/namespaces/default/deployments/hello-node",
+                "uid": "f9e3e6df-83a1-11e7-96f6-f2ee01e28c74"
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "matchLabels": {
+                        "run": "hello-node"
+                    }
+                },
+                "strategy": {
+                    "rollingUpdate": {
+                        "maxSurge": 1,
+                        "maxUnavailable": 1
+                    },
+                    "type": "RollingUpdate"
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "run": "hello-node"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "image": "hello-node:v1",
+                                "imagePullPolicy": "IfNotPresent",
+                                "name": "hello-node",
+                                "ports": [
+                                    {
+                                        "containerPort": 8080,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File"
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "restartPolicy": "Always",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "terminationGracePeriodSeconds": 30
+                    }
+                }
+            },
+            "status": {
+                "availableReplicas": 1,
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2017-08-17T23:15:36Z",
+                        "lastUpdateTime": "2017-08-17T23:15:36Z",
+                        "message": "Deployment has minimum availability.",
+                        "reason": "MinimumReplicasAvailable",
+                        "status": "True",
+                        "type": "Available"
+                    }
+                ],
+                "observedGeneration": 1,
+                "readyReplicas": 1,
+                "replicas": 1,
+                "updatedReplicas": 1
+            }
+        },
+        {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "metadata": {
+                "annotations": {
+                    "deployment.kubernetes.io/desired-replicas": "1",
+                    "deployment.kubernetes.io/max-replicas": "2",
+                    "deployment.kubernetes.io/revision": "1"
+                },
+                "creationTimestamp": "2017-08-28T23:44:58Z",
+                "generation": 1,
+                "labels": {
+                    "pod-template-hash": "180744149",
+                    "run": "hello-minikube"
+                },
+                "name": "hello-minikube-180744149",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "extensions/v1beta1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Deployment",
+                        "name": "hello-minikube",
+                        "uid": "e6d662ba-8c4a-11e7-8c38-f2ee01e28c74"
+                    }
+                ],
+                "resourceVersion": "33595",
+                "selfLink": "/apis/extensions/v1beta1/namespaces/default/replicasets/hello-minikube-180744149",
+                "uid": "e6d95bea-8c4a-11e7-8c38-f2ee01e28c74"
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "matchLabels": {
+                        "pod-template-hash": "180744149",
+                        "run": "hello-minikube"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "pod-template-hash": "180744149",
+                            "run": "hello-minikube"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "image": "gcr.io/google_containers/echoserver:1.4",
+                                "imagePullPolicy": "IfNotPresent",
+                                "name": "hello-minikube",
+                                "ports": [
+                                    {
+                                        "containerPort": 8080,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File"
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "restartPolicy": "Always",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "terminationGracePeriodSeconds": 30
+                    }
+                }
+            },
+            "status": {
+                "availableReplicas": 1,
+                "fullyLabeledReplicas": 1,
+                "observedGeneration": 1,
+                "readyReplicas": 1,
+                "replicas": 1
+            }
+        },
+        {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "metadata": {
+                "annotations": {
+                    "deployment.kubernetes.io/desired-replicas": "1",
+                    "deployment.kubernetes.io/max-replicas": "2",
+                    "deployment.kubernetes.io/revision": "1"
+                },
+                "creationTimestamp": "2017-08-17T23:15:36Z",
+                "generation": 1,
+                "labels": {
+                    "pod-template-hash": "1038538626",
+                    "run": "hello-node"
+                },
+                "name": "hello-node-1038538626",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "extensions/v1beta1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Deployment",
+                        "name": "hello-node",
+                        "uid": "f9e3e6df-83a1-11e7-96f6-f2ee01e28c74"
+                    }
+                ],
+                "resourceVersion": "33545",
+                "selfLink": "/apis/extensions/v1beta1/namespaces/default/replicasets/hello-node-1038538626",
+                "uid": "f9e4a667-83a1-11e7-96f6-f2ee01e28c74"
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "matchLabels": {
+                        "pod-template-hash": "1038538626",
+                        "run": "hello-node"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "pod-template-hash": "1038538626",
+                            "run": "hello-node"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "image": "hello-node:v1",
+                                "imagePullPolicy": "IfNotPresent",
+                                "name": "hello-node",
+                                "ports": [
+                                    {
+                                        "containerPort": 8080,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File"
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "restartPolicy": "Always",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {},
+                        "terminationGracePeriodSeconds": 30
+                    }
+                }
+            },
+            "status": {
+                "availableReplicas": 1,
+                "fullyLabeledReplicas": 1,
+                "observedGeneration": 1,
+                "readyReplicas": 1,
+                "replicas": 1
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": "",
+        "selfLink": ""
+    }
+}

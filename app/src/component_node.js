@@ -1,23 +1,37 @@
 import React from "react";
 import ComponentPod from "./component_pod";
 
-const ComponentNode = (props) => {
-    // iterate over each node for the pods
-    const nodePods = props.pods.map((pod) => {
-        return (
-            <ComponentPod>
-                onPodSelect={props.onPodSelect}
-                pod={pod}
-            </ComponentPod>
-        );
-    });
+class ComponentNode extends React.Component {
 
-    return (
-        <div className="component-node-div">
-            NODE
-            {nodePods}
-        </div>
-    )
+    constructor(props) {
+        super(props);
+        console.log(this.props);
+        this.state = {
+            pods: this.props.pods
+        }        
+    }
+
+    renderList() {
+        console.log(this.state.pods);
+        // iterate over each node for the pods
+        return this.state.pods.map((pod) => {
+            return (
+                <ComponentPod 
+                    onPodSelect={this.state.onPodSelect}
+                    pod={pod}
+                />
+            );
+        });
+    }
+
+    render() {
+        return(
+            <div className="component-node-div">
+                NODE
+                {this.renderList()}  
+            </div>
+        )
+    }
 };
 
 export default ComponentNode;
