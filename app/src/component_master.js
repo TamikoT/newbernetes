@@ -1,5 +1,4 @@
 import React from "react";
-import ComponentNode from "./component_node";
 
 class ComponentMaster extends React.Component {
     constructor(props) {

@@ -1,0 +1,18 @@
+{
+    "nodes": {
+        "node1": {
+            "pods": [
+                "pod1",
+                "pod2"
+            ]
+        },
+        "node2": {
+            "pods": [
+                "podA",
+                "podB",
+                "podC",
+                "podD"
+            ]
+        }
+    }
+}

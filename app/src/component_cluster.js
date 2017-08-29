@@ -1,30 +1,30 @@
 import React from "react";
-import ComponentNode from './component_node';
 import ComponentMaster from './component_master';
+import ComponentNode from './component_node';
+import data from './simpledata.json'
+import NodeList from './nodelist.js'
 
 class ComponentCluster extends React.Component {
     constructor(props) {
         super(props);
-
+        
         this.state = {
             nodes: [1, 2],
             pods: [1, 2, 3, 4],
-            selectedPod: null
+            selectedPod: null,
+            data: data
         };
     }
-
-    // TODO: map array of nodes to show ComponentNode
 
     render() {
         return (
             <div>
                 <div className="component-node-div">
-                    <ComponentMaster></ComponentMaster>
+                    <ComponentMaster/>
                 </div>
                 <div>
-                    <ComponentNode
-                        onPodSelect={selectedPod => this.setState({ selectedPod })}
-                        pods={this.state.pods}
+                    <NodeList
+                        data={this.state.data}
                     />
                 </div>
                 <div>
