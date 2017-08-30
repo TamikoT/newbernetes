@@ -18,19 +18,27 @@ class App extends Component {
             <div className="demo-card-wide mdl-card mdl-shadow--2dp">
               <img src={logo} className="App-logo" alt="logo" />
               <div className="mdl-card__title">
-                <h3 className="mdl-card__title-text">Welcome</h3>
+                <h3 className="mdl-card__title-text">Kubernetes Scheduling</h3>
               </div>
               <div className="mdl-card__supporting-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Mauris sagittis pellentesque lacus eleifend lacinia...
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Mauris sagittis pellentesque lacus eleifend lacinia...
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Mauris sagittis pellentesque lacus eleifend lacinia...
+                <p>
+                  On our running cluster, we can task the scheduler to assign an unassigned pod to a node. The scheduler takes into account resource requirements of the pods and the availability of CPU and RAM on each node.
+                </p>
+                <ul>
+                  <li>
+                    <strong>Master</strong> (control plane): makes global decisions about the cluster and detects and responds to events
+                  </li>
+                  <li>
+                    <strong>Node</strong>: worker machine (physical or VM) in a cluster
+                  </li>
+                  <li>
+                    <strong>Pod</strong>: collection of containers (like Docker) that executes together
+                  </li>
+                </ul>
               </div>
               <div className="mdl-card__actions mdl-card--border">
                 <a className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                  Get Started
+                  MORE
                 </a>
               </div>
             </div>
