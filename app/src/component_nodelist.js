@@ -8,13 +8,13 @@ class NodeList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: this.props.data
+            nodes: this.props.nodes
         };
     }
 
     renderList() {
-        var nodes = this.state.data.nodes;
-        return Object.keys(nodes).map((nodeName) => {
+        var nodes = this.state.nodes
+        return Object.keys(nodes).map((nodeName, i) => {
             return (
                 <div>
                     <ComponentNode

@@ -7,7 +7,7 @@ const ComponentPod = ({ pod, onPodSelect }) => {
         <div onClick={() => onPodSelect(pod)} className="component-pod-div">
             <div className="card">
                 <div className="card-content">{podName}</div>
-            </div>
+            </div> 
         </div>
     );
 };

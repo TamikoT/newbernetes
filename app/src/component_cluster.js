@@ -1,18 +1,17 @@
 import React from "react";
 import ComponentMaster from './component_master';
 import ComponentNode from './component_node';
-import data from './simpledata.json'
-import NodeList from './nodelist.js'
+import jsondata from './simpledata.json'
+import NodeList from './component_nodelist.js'
 
 class ComponentCluster extends React.Component {
     constructor(props) {
         super(props);
         
         this.state = {
-            nodes: [1, 2],
-            pods: [1, 2, 3, 4],
+            nodes: jsondata["nodes"],
             selectedPod: null,
-            data: data
+            data: jsondata
         };
     }
 
@@ -24,7 +23,8 @@ class ComponentCluster extends React.Component {
                 </div>
                 <div>
                     <NodeList
-                        data={this.state.data}
+                        data={this.state.datas}
+                        nodes={this.state.nodes}
                     />
                 </div>
                 <div>
